@@ -45,6 +45,7 @@ class EditGestureViewController: EditableGestureViewController {
         imageView.image = gesture?.image
         if var row = gesture?.action.id {
             actionPicker.selectRow(row, inComponent: 0, animated: false)
+            actionPicker.currentAction = row
         }
     }
     

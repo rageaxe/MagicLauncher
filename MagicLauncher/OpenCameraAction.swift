@@ -1,15 +1,17 @@
 //
-//  TestAction.swift
+//  OpenCameraAction.swift
 //  MagicLauncher
 //
-//  Created by Jaroslav Chaninovicz on 06/06/15.
+//  Created by Jaroslav Chaninovicz on 09/06/15.
 //  Copyright (c) 2015 Jaroslav Chaninovicz. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
-class TestAction: Action {
+class OpenCameraAction: Action {
+    
+    let cameraViewController : CameraViewController = CameraViewController()
+    
     init(name : NSString, id: Int) {
         super.init()
         self.name = name
@@ -17,7 +19,6 @@ class TestAction: Action {
     }
     
     override func action(parentController: UIViewController) {
-        println("hello?")
-        parentController.navigationController?.popToRootViewControllerAnimated(true)
+        parentController.navigationController?.pushViewController(cameraViewController, animated: true)
     }
 }

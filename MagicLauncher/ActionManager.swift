@@ -17,9 +17,10 @@ class ActionManager {
     
     private func createActions() {
         actions.append(PrintlnAction(name: "Println Action", id: 0))
-        actions.append(TestAction(name: "Test Action", id : 1))
-        actions.append(RandomAction(name: "Random Action", id: 2))
+        actions.append(TestAction(name: "Return to Root", id : 1))
+        actions.append(RandomAction(name: "Change Color", id: 2))
         actions.append(OpenGoogleAction(name: "Open Google", id: 3))
+        actions.append(OpenCameraAction(name: "Open Camera", id: 4))
     }
     
     func getActions()->[Action] {

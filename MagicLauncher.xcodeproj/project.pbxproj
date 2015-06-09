@@ -41,6 +41,8 @@
 		24BD15DE1B23246B00EEC67E /* EditGestureViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD15DD1B23246B00EEC67E /* EditGestureViewControllerDelegate.swift */; };
 		24BD15E01B23392300EEC67E /* DeleteGestureButtonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD15DF1B23392300EEC67E /* DeleteGestureButtonLayout.swift */; };
 		24E65CAA1B26E0BA0009979C /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E65CA91B26E0BA0009979C /* WebViewViewController.swift */; };
+		24E65CAC1B26E8D40009979C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E65CAB1B26E8D40009979C /* CameraViewController.swift */; };
+		24E65CAE1B26EA810009979C /* OpenCameraAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E65CAD1B26EA810009979C /* OpenCameraAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		24BD15DD1B23246B00EEC67E /* EditGestureViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGestureViewControllerDelegate.swift; sourceTree = "<group>"; };
 		24BD15DF1B23392300EEC67E /* DeleteGestureButtonLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteGestureButtonLayout.swift; sourceTree = "<group>"; };
 		24E65CA91B26E0BA0009979C /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		24E65CAB1B26E8D40009979C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		24E65CAD1B26EA810009979C /* OpenCameraAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenCameraAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +198,7 @@
 				24BD15D51B23142100EEC67E /* GestureTableViewController.swift */,
 				24BD15D91B2315A400EEC67E /* GestureTableViewControllerDelegate.swift */,
 				24E65CA91B26E0BA0009979C /* WebViewViewController.swift */,
+				24E65CAB1B26E8D40009979C /* CameraViewController.swift */,
 			);
 			name = Presentation;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				24BD15BD1B22EA3600EEC67E /* RandomAction.swift */,
 				24BD15C81B22FFE600EEC67E /* Gesture.swift */,
 				248A63521B25C5F400960F70 /* OpenGoogleAction.swift */,
+				24E65CAD1B26EA810009979C /* OpenCameraAction.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -346,11 +352,13 @@
 				24BD15CD1B23020800EEC67E /* SaveGestureButtonLayout.swift in Sources */,
 				24BD15DC1B2323B600EEC67E /* EditGestureViewController.swift in Sources */,
 				24BD15C01B22EA8F00EEC67E /* ActionPicker.swift in Sources */,
+				24E65CAE1B26EA810009979C /* OpenCameraAction.swift in Sources */,
 				24E65CAA1B26E0BA0009979C /* WebViewViewController.swift in Sources */,
 				248A634F1B257EBC00960F70 /* RecongnizeGesture.swift in Sources */,
 				24BD15BE1B22EA3600EEC67E /* RandomAction.swift in Sources */,
 				24BD15B21B22E4D300EEC67E /* DefineGestureViewController.swift in Sources */,
 				24BD15CF1B23029400EEC67E /* InitialViewControllerDelegate.swift in Sources */,
+				24E65CAC1B26E8D40009979C /* CameraViewController.swift in Sources */,
 				24BD15B81B22E8F100EEC67E /* Action.swift in Sources */,
 				24BD15AF1B22E40800EEC67E /* DefineGestureButtonLayout.swift in Sources */,
 				24BD15CB1B23007B00EEC67E /* GestureManager.swift in Sources */,

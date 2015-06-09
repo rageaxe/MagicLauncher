@@ -18,6 +18,5 @@ class RandomAction: Action {
     
     override func action(parentController: UIViewController) {
         parentController.view.backgroundColor = UIColor.redColor()
-        println("random action!!!")
     }
 }
