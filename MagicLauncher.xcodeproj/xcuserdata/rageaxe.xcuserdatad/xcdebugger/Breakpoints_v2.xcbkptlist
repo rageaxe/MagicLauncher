@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MagicLauncher/RecongnizeGesture.swift"
-            timestampString = "455465561.612401"
+            timestampString = "455531189.000016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "recognizerScaleTo(_:size:)"
             landmarkType = "5">
          </BreakpointContent>

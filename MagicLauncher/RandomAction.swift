@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RandomAction: Action {
     init(name : NSString, id: Int) {
@@ -15,7 +16,8 @@ class RandomAction: Action {
         self.id = id
     }
     
-    override func action() {
+    override func action(parentController: UIViewController) {
+        parentController.view.backgroundColor = UIColor.redColor()
         println("random action!!!")
     }
 }

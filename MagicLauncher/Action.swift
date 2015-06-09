@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Action {
     
     var name : NSString?
     var id : Int?
     
-    func action() {
+    func action(parentController: UIViewController) {
         fatalError("This method must be overridden")
     }
 }

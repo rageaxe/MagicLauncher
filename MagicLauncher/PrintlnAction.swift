@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PrintlnAction: Action {
     init(name : NSString, id: Int) {
@@ -15,7 +16,7 @@ class PrintlnAction: Action {
         self.id = id
     }
     
-    override func action() {
+    override func action(parentController: UIViewController) {
         println("println action!!!")
     }
 }

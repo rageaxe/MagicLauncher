@@ -12,7 +12,7 @@ import UIKit
 class DrawGestureViewController: UIViewController {
     
     var imageView : UIImageView = UIImageView()
-    
+    let recognizeGesture : RecongnizeGesture = RecongnizeGesture()
     var lastPoint = CGPoint.zeroPoint
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0

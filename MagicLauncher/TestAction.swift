@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TestAction: Action {
     init(name : NSString, id: Int) {
@@ -15,7 +16,7 @@ class TestAction: Action {
         self.id = id
     }
     
-    override func action() {
+    override func action(parentController: UIViewController) {
         println("test action!!!")
     }
 }

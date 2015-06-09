@@ -11,7 +11,7 @@ import UIKit
 
 class InputGestureViewController: DrawGestureViewController {
     var delegate : InputGestureViewControllerDelegate?
-    let recognizeGesture : RecongnizeGesture = RecongnizeGesture()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class InputGestureViewController: DrawGestureViewController {
     }
     
     func recognizedGestureExecuteAction(gesture: Gesture?) {
-        gesture?.action.action()
+        gesture?.action.action(self)
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -32,7 +32,8 @@ class DefineGestureViewController: EditableGestureViewController {
     func saveGestureButtonAction(sender:UIButton!)
     {
         if let image = imageView.image {
-            self.delegate?.createGesture(image, action: actionPicker.getCurrentAction(), path: gesturePoints)
+            var normalisedPath = recognizeGesture.normaliseGesturePath(gesturePoints)
+            self.delegate?.createGesture(image, action: actionPicker.getCurrentAction(), path: normalisedPath)
             self.imageView.image = nil
             println("Gesture Saved")
         } else {

@@ -52,7 +52,8 @@ class EditGestureViewController: EditableGestureViewController {
     {
         if let image = imageView.image {
             let gestureId: Int? = gesture?.id
-            self.delegate?.editGesture(gestureId!, image: image, action: actionPicker.getCurrentAction(), path: gesturePoints)
+            var normalisedPath = recognizeGesture.normaliseGesturePath(gesturePoints)
+            self.delegate?.editGesture(gestureId!, image: image, action: actionPicker.getCurrentAction(), path: normalisedPath)
             navigationController?.popViewControllerAnimated(true)
             println("Gesture edited")
         } else {

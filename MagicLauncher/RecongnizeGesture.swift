@@ -24,17 +24,10 @@ class RecongnizeGesture {
         var b: Float = MAXFLOAT
         var bestGesture : Gesture?
         
-        var resamplePath: [CGPoint] = recognizerResample(gesturePath, pathSize: defaultPathSampleSize)
-        var scaledPath = recognizerScaleTo(resamplePath, size: BoundingBoxSize)
-        var origin = GLKVector2Make(0, 0)
-        var normalisedPath = recognizerTranslateTo(scaledPath, origin: origin)
+        var normalisedPath = normaliseGesturePath(gesturePath)
         
         for (var i = 0; i < definedGestures.count; i++) {
-            var definedGestureResamplePath = recognizerResample(definedGestures[i].path, pathSize: defaultPathSampleSize)
-            var definedGestureScaledPath = recognizerScaleTo(definedGestureResamplePath, size: BoundingBoxSize)
-            var definedGesturenormalisedPath = recognizerTranslateTo(definedGestureScaledPath, origin: origin)
-
-            var d = recognizerDistanceAtBestAngle(normalisedPath, definedGesturePath: definedGesturenormalisedPath, radiansA: -theta, radiansB: theta, radiansDelta: thetaThreshold)
+            var d = recognizerDistanceAtBestAngle(normalisedPath, definedGesturePath: definedGestures[i].path, radiansA: -theta, radiansB: theta, radiansDelta: thetaThreshold)
 
             if (d < b) {
                 b = d;
@@ -43,6 +36,14 @@ class RecongnizeGesture {
         }
 
         return bestGesture
+    }
+    
+    func normaliseGesturePath(path: [CGPoint])->[CGPoint] {
+        var resamplePath: [CGPoint] = recognizerResample(path, pathSize: defaultPathSampleSize)
+        var scaledPath = recognizerScaleTo(resamplePath, size: BoundingBoxSize)
+        var origin = GLKVector2Make(0, 0)
+        var normalisedPath = recognizerTranslateTo(scaledPath, origin: origin)
+        return normalisedPath
     }
     
     func recognizerDistanceAtBestAngle(path: [CGPoint], definedGesturePath: [CGPoint], radiansA : Float, radiansB : Float, radiansDelta: Float) -> Float{
