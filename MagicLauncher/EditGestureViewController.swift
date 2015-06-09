@@ -54,13 +54,16 @@ class EditGestureViewController: EditableGestureViewController {
         if let image = imageView.image {
             let gestureId: Int? = gesture?.id
             var normalisedPath = recognizeGesture.normaliseGesturePath(gesturePoints)
-            self.delegate?.editGesture(gestureId!, image: image, action: actionPicker.getCurrentAction(), path: normalisedPath)
-            navigationController?.popViewControllerAnimated(true)
-            println("Gesture edited")
+            if(normalisedPath.count != 64) {
+                println("bad path count,draw again")
+            } else {
+                self.delegate?.editGesture(gestureId!, image: image, action: actionPicker.getCurrentAction(), path: normalisedPath)
+                navigationController?.popViewControllerAnimated(true)
+                println("Gesture edited")
+            }
         } else {
             println("draw gesture!")
         }
-        
     }
     
     func deleteGestureButtonAction(sender:UIButton!) {
