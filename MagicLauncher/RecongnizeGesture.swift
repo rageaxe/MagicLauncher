@@ -26,6 +26,10 @@ class RecongnizeGesture {
         
         var normalisedPath = normaliseGesturePath(gesturePath)
         
+        if(normalisedPath.count != 64) {
+            return nil
+        }
+        
         for (var i = 0; i < definedGestures.count; i++) {
             var d = recognizerDistanceAtBestAngle(normalisedPath, definedGesturePath: definedGestures[i].path, radiansA: -theta, radiansB: theta, radiansDelta: thetaThreshold)
 

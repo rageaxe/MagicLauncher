@@ -26,6 +26,8 @@ class InputGestureViewController: DrawGestureViewController {
             let recognizedGesture : Gesture? = recognizeGesture.recognizeGesture(gesturePoints, definedGestures: gestures)
             if let gesture = recognizedGesture {
                 recognizedGestureExecuteAction(gesture)
+            } else {
+                println("bad path count or no defined gestures created")
             }
             
         }

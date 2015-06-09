@@ -33,9 +33,13 @@ class DefineGestureViewController: EditableGestureViewController {
     {
         if let image = imageView.image {
             var normalisedPath = recognizeGesture.normaliseGesturePath(gesturePoints)
-            self.delegate?.createGesture(image, action: actionPicker.getCurrentAction(), path: normalisedPath)
-            self.imageView.image = nil
-            println("Gesture Saved")
+            if(normalisedPath.count != 64) {
+                println("bad path count,draw again")
+            } else {
+                self.delegate?.createGesture(image, action: actionPicker.getCurrentAction(), path: normalisedPath)
+                self.imageView.image = nil
+                println("Gesture Saved")
+            }
         } else {
             println("draw gesture!")
         }
